@@ -1,4 +1,6 @@
-package main.java;
+package main.java.builders;
+
+import main.java.User;
 
 public  class UserBuilder
 {
@@ -9,31 +11,31 @@ public  class UserBuilder
     }
 
     public UserBuilder firstName(String firstName) {
-        user.setAddressFrom(firstName);
+        user.setFirstName(firstName);
         return this;
     }
 
     public UserBuilder lastName(String lastName) {
-        user.setAddressTo(lastName);
+        user.setLastName(lastName);
         return this;
     }
 
     public UserBuilder age(int age) {
-        user.setAddressCopy(age);
+        user.setAge(age);
         return this;
     }
 
     public UserBuilder phone(String phone) {
-        user.setSubject(phone);
+        user.setPhone(phone);
         return this;
     }
 
     public UserBuilder address(String address) {
-        user.setText(address);
+        user.setAddress(address);
         return this;
     }
-    
-    public UserBuilder build() {
+
+    public User build() {
         return user;
     }
 }
