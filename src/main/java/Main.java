@@ -3,6 +3,7 @@ package main.java;
 import main.java.builders.UserBuilder;
 import main.java.proxy.ExpensiveObject;
 import main.java.proxy.ExpensiveObjectProxy;
+import main.java.template.CreateProcuramentRequest;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,6 +43,9 @@ public class Main {
         object.process();
         object.process();
 
+
+        CreateProcuramentRequest createProcuramentRequest = new CreateProcuramentRequest();
+        createProcuramentRequest.ctateRequest();
     }
 
 }
