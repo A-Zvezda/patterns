@@ -1,10 +1,13 @@
 package main.java;
 
 import main.java.builders.UserBuilder;
+import main.java.proxy.ExpensiveObject;
+import main.java.proxy.ExpensiveObjectProxy;
+import main.java.template.CreateProcuramentRequest;
 
 public class Main {
     public static void main(String[] args) {
-   
+
         User user1 = new UserBuilder()
                 .firstName("aaa")
                 .lastName("bb")
@@ -34,6 +37,15 @@ public class Main {
                 .build();
 
         System.out.println(user3);
+
+
+        ExpensiveObject object = new ExpensiveObjectProxy();
+        object.process();
+        object.process();
+
+
+        CreateProcuramentRequest createProcuramentRequest = new CreateProcuramentRequest();
+        createProcuramentRequest.ctateRequest();
     }
 
 }
